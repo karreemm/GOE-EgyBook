@@ -1,11 +1,13 @@
-import Image from "next/image";
+import Nav from "./_components/Navbar/Nav";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-100">
-      <h1 className="text-4xl font-bold text-gray-800">
-        GOE EgyBook
-      </h1>
-    </div>
+    <>
+      <Nav role="user" />
+      <div className="mt-30">
+        <Footer />
+      </div>
+    </>
   );
 }

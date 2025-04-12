@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+:root {
+  --font-display: "Montserrat", sans-serif;
+  --font-montserrat: var(--font-display);
+}
+
+@theme{
+  --font-montserrat: "Montserrat", sans-serif;
+  --color-theme-gold: #D2AC71;
+  --color-theme-black: #121212
+}
+
+@layer base {
+  html {
+    font-family: var(--font-montserrat);
+  }
+}
+
+
