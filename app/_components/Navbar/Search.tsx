@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Image from "next/image";
 
 import Search from "@/app/_assets/icons/Search.webp";
 import RightArrow from "@/app/_assets/icons/Arrow_right.webp";
@@ -61,7 +62,13 @@ export default function SearchComponent() {
         onClick={toggleSearch}
         className="cursor-pointer flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#1e1e1e] hover:scale-[1.2] transition duration-300 ease-in-out"
       >
-        <img src={Search.src} alt="Search Icon" className="w-[16px]" />
+        <Image
+          src={Search}
+          alt="Search Icon"
+          className="w-[16px]"
+          width={16}
+          height={16}
+        />
       </button>
 
       {/* Search Layout */}
@@ -84,7 +91,13 @@ export default function SearchComponent() {
             }`}
           >
             <div className="flex items-center px-4 py-3 bg-[#444444] rounded-full">
-              <img src={Search.src} alt="Search" className="w-5 h-5 mr-3" />
+              <Image
+                src={Search}
+                alt="Search"
+                className="w-5 h-5 mr-3"
+                width={20}
+                height={20}
+              />
               <input
                 id="search-input"
                 type="text"
@@ -113,10 +126,12 @@ export default function SearchComponent() {
                       className="w-full rounded-md p-3 flex items-center cursor-pointer hover:bg-[#555555]"
                     >
                       <div className="w-12 h-12 bg-[#F6EEE5] rounded-full flex items-center justify-center mr-3">
-                        <img
-                          className="w-6"
-                          src={Location.src}
+                        <Image
+                          src={Location}
                           alt="Location Icon"
+                          className="w-6"
+                          width={24}
+                          height={24}
                         />
                       </div>
 
@@ -137,17 +152,19 @@ export default function SearchComponent() {
                     See all results for "search"
                   </span>
                   <button className="cursor-pointer">
-                    <img
-                      src={RightArrow.src}
+                    <Image
+                      src={RightArrow}
                       alt="See all"
                       className="w-5 h-5"
+                      width={20}
+                      height={20}
                     />
                   </button>
                 </div>
               </div>
             )}
 
-            {/* Search Result  */}
+            {/* Search Result */}
             {searchTerm && (
               <div>
                 <div className="bg-[#444444] rounded-3xl p-4">
@@ -163,10 +180,12 @@ export default function SearchComponent() {
                           className="w-full rounded-md p-3 flex items-center cursor-pointer hover:bg-[#555555]"
                         >
                           <div className="w-12 h-12 bg-[#F6EEE5] rounded-full flex items-center justify-center mr-3">
-                            <img
-                              className="w-6"
-                              src={Location.src}
+                            <Image
+                              src={Location}
                               alt="Location Icon"
+                              className="w-6"
+                              width={24}
+                              height={24}
                             />
                           </div>
 
@@ -195,10 +214,12 @@ export default function SearchComponent() {
                         See all results for "{searchTerm}"
                       </span>
                       <button className="cursor-pointer">
-                        <img
-                          src={RightArrow.src}
+                        <Image
+                          src={RightArrow}
                           alt="See all"
                           className="w-5 h-5"
+                          width={20}
+                          height={20}
                         />
                       </button>
                     </div>

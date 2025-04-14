@@ -1,12 +1,12 @@
 import Nav from "./_components/Navbar/Nav";
-import Footer from "./_components/Footer";
+import Hero from "./HeroSection/Hero";
 
 export default function Home() {
   return (
     <>
-      <Nav role="user" />
-      <div className="mt-30">
-        <Footer />
+      <Nav role="guest" />
+      <div className="">
+        <Hero />
       </div>
     </>
   );
