@@ -44,7 +44,7 @@ export default function DatePicker() {
       start: `${startDate.day} ${startDate.month} 2025`,
       end: `${endDate.day} ${endDate.month} 2025`,
     });
-  }, []);
+  },[]);
 
   const togglePicker = () => {
     if (isActive) {

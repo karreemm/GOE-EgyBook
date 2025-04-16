@@ -10,8 +10,9 @@ export default function TrendingDestinations() {
       data={TrendingDestinationsData}
       renderCard={(destination) => <Card data={destination} />}
       title="Trending Destinations"
-      mobileCardWidth={100}
+      mobileCardWidth={85}
       desktopCardWidth={40}
+      hasMobileGap={true}
       slidesToShow={{
         mobile: 1,
         desktop: 2,

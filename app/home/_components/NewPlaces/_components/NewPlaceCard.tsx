@@ -10,7 +10,7 @@ export default function NewPlaceCard(
             <Image
                 src={data.image}
                 alt={data.title}
-                className="rounded-4xl"
+                className="rounded-4xl hover:brightness-50 transition-all duration-500 ease-in-out"
             />
 
             <div className="absolute bottom-6 left-6">

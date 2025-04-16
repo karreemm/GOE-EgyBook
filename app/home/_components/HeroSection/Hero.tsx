@@ -5,9 +5,12 @@ import Navigation from "@/app/_assets/icons/Navigation.webp";
 
 import { PickerProvider } from "@/app/_context/PickerContext";
 import Picker from "./Picker";
+import { useAuthContext } from "@/app/_context/AuthContext";
 
 export default function Hero() {
 
+  const { userRole } = useAuthContext();
+  const isGuest = userRole === "guest";
 
   return (
     <div className="relative w-full">
@@ -39,7 +42,7 @@ export default function Hero() {
         <div className="flex flex-col mt-2">
           <h1 className="flex flex-col text-2xl md:text-[40px] font-semibold text-white mb-2">
             <p>
-              Hey!
+              {isGuest ? "Hey!" : "Hey, Beshoy!"}
             </p>
             <p className="">Tell us where you want to stay</p>
           </h1>

@@ -3,20 +3,16 @@
 import Navbar from "./Navbar";
 import NavbarMobile from "./NavbarMobile";
 
-interface NavProps {
-  role: string;
-}
-
-export default function Nav({ role }: NavProps) {
+export default function Nav() {
 
   return (
     <>
-    <div className='lg:hidden'>
-      <NavbarMobile role={role} />
-    </div>
-    <div className='hidden lg:block'>
-      <Navbar role={role} />
-    </div>
+      <div className='lg:hidden'>
+        <NavbarMobile />
+      </div>
+      <div className='hidden lg:block'>
+        <Navbar />
+      </div>
     </>
-);
+  );
 }

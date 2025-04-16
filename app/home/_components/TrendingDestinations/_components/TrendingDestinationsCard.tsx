@@ -6,12 +6,12 @@ export default function TrendingDestinationsCard(
     {data} : {data: TrendingDestinationsDataType}
 ){
     return(
-        <div className="w-full h-[360px] relative rounded-3xl overflow-hidden">
+        <div className="w-full h-[360px] relative rounded-3xl overflow-hidden group">
             <Image
                 src={data.image}
                 alt={data.title}
                 fill
-                className="object-cover h-full"
+                className="object-cover h-full group-hover:scale-105 group-hover:rotate-3 transition-all duration-500"
             />
             
             <div 

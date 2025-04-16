@@ -10,8 +10,9 @@ export default function MostRelevant() {
       data={mostRelevantData}
       renderCard={(card) => <Card data={card} />}
       title="The Most Relevant"
-      mobileCardWidth={100}
+      mobileCardWidth={70}
       desktopCardWidth={41.5}
+      hasMobileGap={true}
       slidesToShow={{
         mobile: 1,
         desktop: 2,

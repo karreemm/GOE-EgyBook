@@ -57,7 +57,9 @@ export default function Carousel({
 
   return (
     <div className="w-full bg-theme-black text-white py-8">
-      <h1 className="text-2xl md:text-[40px] font-extrabold mb-8">{title}</h1>
+      <h1 className="text-2xl md:text-[40px] font-extrabold mb-8">
+        {title}
+      </h1>
 
       <div className="relative">
         <button

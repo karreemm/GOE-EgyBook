@@ -20,7 +20,7 @@ export const TrendingDestinationsData: TrendingDestinationsDataType[] = [
         image: Cairo,
         title: "Cairo",
         description: "Unveil secrets of ancient wonders.",
-        colorGredient: "linear-gradient(122.62deg, #FC8E50 10%, rgba(252, 142, 80, 0) 80%);",
+        colorGredient: "linear-gradient(122.62deg, #FC8E50 10%, rgba(252, 142, 80, 0) 80%)",
         link: "#"
     },
     {
@@ -28,7 +28,7 @@ export const TrendingDestinationsData: TrendingDestinationsDataType[] = [
         image: Hurghada,
         title: "Hurghada",
         description: "Sunshine, beaches, and vibrant reefs.",
-        colorGredient: "linear-gradient(122.62deg, #6497C4 10%, rgba(100, 151, 196, 0) 80%);",
+        colorGredient: "linear-gradient(122.62deg, #6497C4 10%, rgba(100, 151, 196, 0) 80%)",
         link: "#"
     },
     {
@@ -36,7 +36,7 @@ export const TrendingDestinationsData: TrendingDestinationsDataType[] = [
         image: Sharm,
         title: "Sharm El Sheikh",
         description: "Dive into breathtaking underwater vistas.",
-        colorGredient: "linear-gradient(122.62deg, #BB5050 10%, rgba(187, 80, 80, 0) 80%);",
+        colorGredient: "linear-gradient(122.62deg, #BB5050 10%, rgba(187, 80, 80, 0) 80%)",
         link: "#"
     },
     {
@@ -44,7 +44,7 @@ export const TrendingDestinationsData: TrendingDestinationsDataType[] = [
         image: Luxor,
         title: "Luxor & Aswan",
         description: "Journey through timeless historic treasures.",
-        colorGredient: "linear-gradient(122.62deg, #F29E22 10%, rgba(242, 158, 34, 0) 80%);",
+        colorGredient: "linear-gradient(122.62deg, #F29E22 10%, rgba(242, 158, 34, 0) 80%)",
         link: "#"
     }
 ]

@@ -9,12 +9,12 @@ export default function RelevantCard(
     { data }: { data: MostRelevantDataType } 
 ) {
     return(
-        <div className="w-[100%] mx-auto md:mx-0 flex flex-col gap-5 rounded-4xl bg-white text-theme-black">
+        <div className="w-[100%] mx-auto md:mx-0 flex flex-col gap-5 rounded-4xl bg-white text-theme-black group">
             <div className="relative rounded-2xl">
                 <Image
                     src={data.image}
                     alt={data.title}
-                    className="rounded-4xl w-full h-80"
+                    className="rounded-4xl w-full h-80 group-hover:brightness-50 transition-all duration-500 ease-in-out"
                 />
 
                 <div className="absolute top-6 left-6 bg-white text-[#346D52] font-medium text-[15px] px-3 py-1 rounded-full">
