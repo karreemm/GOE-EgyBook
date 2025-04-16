@@ -59,7 +59,7 @@ export default function NavbarMobile() {
         )}
 
         {isMenuOpen && !isLoggedIn && (
-          <div className="fixed top-0 right-0 h-full w-full text-white p-6 bg-theme-black z-50 flex flex-col">
+          <div className="fixed min-h-full h-full w-full text-white p-6 bg-theme-black z-50 flex flex-col">
             <div className="flex justify-end mb-8">
               <button onClick={toggleMenu} className="focus:outline-none">
                 <Image

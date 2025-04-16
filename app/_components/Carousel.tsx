@@ -28,6 +28,7 @@ export default function Carousel<T extends { id: string | number }>({
   hasMobileGap = false,
   slidesToShow,
 }: CarouselProps<T>) {
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
   const isMobile = useIsMobile();
