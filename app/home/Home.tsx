@@ -1,11 +1,11 @@
 "use client";
 
-import Hero from "./_components/HeroSection/Hero";
-import MostRelevant from "./_components/MostRelevant/MostRelevant";
-import NewPlaces from "./_components/NewPlaces/NewPlaces";
-import ChooseEgyBook from "./_components/ChooseEgyBook/ChooseEgyBook";
-import TrendingDestinations from "./_components/TrendingDestinations/TrendingDestinations";
-import NextAdventure from "./_components/NextAdventure/NextAdventure";
+import Hero from "./_sections/HeroSection/Hero";
+import MostRelevant from "./_sections/MostRelevant/MostRelevant";
+import NewPlaces from "./_sections/NewPlaces/NewPlaces";
+import ChooseEgyBook from "./_sections/ChooseEgyBook/ChooseEgyBook";
+import TrendingDestinations from "./_sections/TrendingDestinations/TrendingDestinations";
+import NextAdventure from "./_sections/NextAdventure/NextAdventure";
 
 export default function Home() {
     return(
