@@ -6,20 +6,20 @@ import NextArrow from "@/app/_assets/icons/Slider_right.webp";
 import PrevArrow from "@/app/_assets/icons/Slider_left.webp";
 import { useIsMobile } from "../_hooks/useIsMobile";
 
-interface CarouselProps {
-  data: any[];
-  renderCard: (item: any) => ReactNode;
+interface CarouselProps<T> {
+  data: T[];
+  renderCard: (item: T) => ReactNode;
   title: string;
   mobileCardWidth: number;
   desktopCardWidth: number;
-  hasMobileGap?: boolean | false;
+  hasMobileGap?: boolean;
   slidesToShow: {
     mobile: number;
     desktop: number;
   };
 }
 
-export default function Carousel({
+export default function Carousel<T extends { id: string | number }>({
   data,
   renderCard,
   title,
@@ -27,8 +27,7 @@ export default function Carousel({
   desktopCardWidth,
   hasMobileGap = false,
   slidesToShow,
-}: CarouselProps) {
-    
+}: CarouselProps<T>) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
   const isMobile = useIsMobile();
@@ -57,9 +56,7 @@ export default function Carousel({
 
   return (
     <div className="w-full bg-theme-black text-white py-8">
-      <h1 className="text-2xl md:text-[40px] font-extrabold mb-8">
-        {title}
-      </h1>
+      <h1 className="text-2xl md:text-[40px] font-extrabold mb-8">{title}</h1>
 
       <div className="relative">
         <button
@@ -83,7 +80,9 @@ export default function Carousel({
               <div
                 key={item.id}
                 className="flex-shrink-0"
-                style={{ width: `${isMobile ? mobileCardWidth : desktopCardWidth}%` }}
+                style={{
+                  width: `${isMobile ? mobileCardWidth : desktopCardWidth}%`,
+                }}
               >
                 {renderCard(item)}
               </div>

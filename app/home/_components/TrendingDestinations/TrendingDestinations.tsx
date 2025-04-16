@@ -1,12 +1,12 @@
 "use client";
 
 import Card from "./_components/TrendingDestinationsCard";
-import { TrendingDestinationsData } from "./TrendingDestinationsData";
+import { TrendingDestinationsData, TrendingDestinationsDataType } from "./TrendingDestinationsData";
 import Carousel from "@/app/_components/Carousel";
 
 export default function TrendingDestinations() {
   return (
-    <Carousel
+    <Carousel<TrendingDestinationsDataType>
       data={TrendingDestinationsData}
       renderCard={(destination) => <Card data={destination} />}
       title="Trending Destinations"
