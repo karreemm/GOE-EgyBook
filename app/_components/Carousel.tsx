@@ -1,22 +1,44 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, ReactNode } from "react";
 import Image from "next/image";
-import Card from "./_components/RelevantCard";
-import { mostRelevantData } from "./mostRelevantData";
 import NextArrow from "@/app/_assets/icons/Slider_right.webp";
 import PrevArrow from "@/app/_assets/icons/Slider_left.webp";
 import { useIsMobile } from "../_hooks/useIsMobile";
 
-export default function MostRelevant() {
+interface CarouselProps {
+  data: any[];
+  renderCard: (item: any) => ReactNode;
+  title: string;
+  mobileCardWidth: number;
+  desktopCardWidth: number;
+  hasMobileGap?: boolean | false;
+  slidesToShow: {
+    mobile: number;
+    desktop: number;
+  };
+}
+
+export default function Carousel({
+  data,
+  renderCard,
+  title,
+  mobileCardWidth,
+  desktopCardWidth,
+  hasMobileGap = false,
+  slidesToShow,
+}: CarouselProps) {
+    
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
   const isMobile = useIsMobile();
 
+  const maxIndex = isMobile
+    ? data.length - slidesToShow.mobile
+    : data.length - slidesToShow.desktop;
+
   const nextSlide = () => {
-    if (currentIndex < mostRelevantData.length - 2 && !isMobile) {
-      setCurrentIndex(currentIndex + 1);
-    } else if (isMobile && currentIndex < mostRelevantData.length - 1) {
+    if (currentIndex < maxIndex) {
       setCurrentIndex(currentIndex + 1);
     } else {
       setCurrentIndex(0);
@@ -27,15 +49,15 @@ export default function MostRelevant() {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     } else {
-      setCurrentIndex(mostRelevantData.length - 1);
+      setCurrentIndex(maxIndex);
     }
   };
 
+  const cardWidth = isMobile ? mobileCardWidth : desktopCardWidth;
+
   return (
     <div className="w-full bg-theme-black text-white py-8">
-      <h1 className="text-2xl md:text-[40px] font-extrabold mb-8">
-        The Most Relevant
-      </h1>
+      <h1 className="text-2xl md:text-[40px] font-extrabold mb-8">{title}</h1>
 
       <div className="relative">
         <button
@@ -48,19 +70,20 @@ export default function MostRelevant() {
 
         <div className="overflow-hidden" ref={carouselRef}>
           <div
-            className="flex transition-transform duration-300 gap-0"
+            className={`flex transition-transform duration-300 ${
+              hasMobileGap ? "gap-5" : "md:gap-5"
+            }`}
             style={{
-              transform: `translateX(-${
-                currentIndex * (isMobile ? 100 : 45)
-              }%)`,
+              transform: `translateX(-${currentIndex * cardWidth}%)`,
             }}
           >
-            {mostRelevantData.map((card) => (
+            {data.map((item) => (
               <div
-                key={card.id}
-                className={`${isMobile ? "w-full" : "w-[42.5%]"} flex-shrink-0`}
+                key={item.id}
+                className="flex-shrink-0"
+                style={{ width: `${isMobile ? mobileCardWidth : desktopCardWidth}%` }}
               >
-                <Card data={card} />
+                {renderCard(item)}
               </div>
             ))}
           </div>

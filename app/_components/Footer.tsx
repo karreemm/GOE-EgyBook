@@ -10,7 +10,7 @@ import FooterMask from "@/app/_assets/images/Footer_mask.webp";
 
 export default function Footer() {
   return (
-    <footer className="relative w-[90%] lg:w-[80%] mx-auto py-6">
+    <footer className="relative w-[90%] lg:w-[80%] mx-auto py-6 mt-10">
       <div className="absolute inset-0 rounded-xl overflow-hidden bg-gradient-to-b from-transparent to-theme-black/90">
         <Image
           src={FooterMask}
@@ -21,16 +21,14 @@ export default function Footer() {
           priority
           style={{
             maskImage:
-              "linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
-            WebkitMaskImage:
-              "linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
+              "linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)"
           }}
         />
       </div>
 
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Left column */}
-        <div className="flex flex-col gap-4">
+
+        <div className="flex flex-col gap-2">
           <div className="flex flex-col gap-4 max-w-lg items-center md:items-start">
             <Image
               src={Logo}
@@ -50,7 +48,6 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* Navigation links */}
           <div className="flex justify-center md:justify-normal flex-wrap gap-6 mt-8 text-theme-gold text-lg md:text-[18px] font-semibold">
             <Link
               href="/"
@@ -89,7 +86,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Right column */}
         <div className="flex flex-col justify-end h-full">
           <div className="flex flex-col gap-4 items-center md:items-end">
             <div className="flex gap-2">

@@ -18,7 +18,7 @@ export default function Navbar({ role }: NavbarProps) {
 
   return (
     <nav className="w-[80%] mx-auto flex items-center justify-between py-4">
-      {/* Logo and Title */}
+
       <div className="flex flex-col items-center">
         <Image
           src={Logo}
@@ -32,7 +32,6 @@ export default function Navbar({ role }: NavbarProps) {
         </h1>
       </div>
 
-      {/* Search & Navigation Links */}
       <div className="flex items-center gap-8">
         <Search />
 
@@ -76,7 +75,6 @@ export default function Navbar({ role }: NavbarProps) {
         </Link>
       </div>
 
-      {/* Icons Section */}
       <div className="flex justify-between items-center gap-24">
         <div className="flex items-center gap-6">
           <button className="flex items-center justify-center gap-1 cursor-pointer hover:scale-[1.1] transition duration-300 ease-in-out">

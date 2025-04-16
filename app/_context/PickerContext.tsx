@@ -48,7 +48,7 @@ export const PickerProvider = ({ children }: { children: ReactNode }) => {
 export const usePickerContext = () => {
   const context = useContext(PickerContext);
   if (context === undefined) {
-    throw new Error("usePickerContext must be used within a PickerProvider");
+    throw new Error("use the PickerProvider");
   }
   return context;
 };

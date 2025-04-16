@@ -7,7 +7,7 @@ import CalenderImage from "@/app/_assets/icons/Calendar.webp";
 import Right from "@/app/_assets/icons/Chevron_right.webp";
 import Left from "@/app/_assets/icons/Chevron_left.webp";
 
-import { usePickerContext } from "../../_context/PickerContext";
+import { usePickerContext } from "@/app/_context/PickerContext";
 import Calendar from "../_components/Calender";
 
 const reservedDays = [

@@ -149,7 +149,7 @@ export default function SearchComponent() {
 
                 <div className="flex justify-between items-center mt-4 pt-2 shadow-2xl">
                   <span className="text-[#F6EEE5] text-[12px]">
-                    See all results for "search"
+                    See all results for search
                   </span>
                   <button className="cursor-pointer">
                     <Image
@@ -202,7 +202,7 @@ export default function SearchComponent() {
                     ) : (
                       <div className="text-center py-4">
                         <p className="text-gray-400 text-[15px]">
-                          No results found for "{searchTerm}"
+                          No results found for {searchTerm}
                         </p>
                       </div>
                     )}
@@ -211,7 +211,7 @@ export default function SearchComponent() {
                   {filteredLocations.length > 0 && (
                     <div className="flex justify-between items-center mt-4 pt-2 shadow-2xl">
                       <span className="text-[#F6EEE5] text-[12px]">
-                        See all results for "{searchTerm}"
+                        See all results for {searchTerm}
                       </span>
                       <button className="cursor-pointer">
                         <Image

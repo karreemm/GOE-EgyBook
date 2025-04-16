@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 import LocationPicker from "./_Pickers/LocationPicker";
 import DatePicker from "./_Pickers/DatePicker";
 import FamilyPicker from "./_Pickers/FamilyPicker";
-import { usePickerContext } from "../_context/PickerContext";
+import { usePickerContext } from "@/app/_context/PickerContext";
 
 export default function Picker() {
   const pickerRef = useRef<HTMLDivElement>(null);

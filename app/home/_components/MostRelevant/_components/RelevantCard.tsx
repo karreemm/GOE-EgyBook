@@ -9,7 +9,7 @@ export default function RelevantCard(
     { data }: { data: MostRelevantDataType } 
 ) {
     return(
-        <div className="w-[100%] mx-auto md:mx-0 md:w-[500px] flex flex-col gap-5 rounded-4xl bg-white text-theme-black">
+        <div className="w-[100%] mx-auto md:mx-0 flex flex-col gap-5 rounded-4xl bg-white text-theme-black">
             <div className="relative rounded-2xl">
                 <Image
                     src={data.image}

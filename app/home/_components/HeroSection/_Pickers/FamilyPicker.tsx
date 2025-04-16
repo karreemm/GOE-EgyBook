@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import Users from "@/app/_assets/icons/Users.webp";
 import Counter from "../_components/Counter";
-import { usePickerContext } from "../../_context/PickerContext";
+import { usePickerContext } from "@/app/_context/PickerContext";
 
 export default function FamilyPicker() {
   const buttonRef = useRef<HTMLButtonElement>(null);

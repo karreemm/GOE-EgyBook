@@ -2,10 +2,13 @@ import Image from "next/image";
 
 import HeroImage from "@/app/_assets/images/Hero_BG.webp";
 import Navigation from "@/app/_assets/icons/Navigation.webp";
-import { PickerProvider } from "../_context/PickerContext";
+
+import { PickerProvider } from "@/app/_context/PickerContext";
 import Picker from "./Picker";
 
 export default function Hero() {
+
+
   return (
     <div className="relative w-full">
      <div className="relative w-full h-[540px]">
@@ -35,7 +38,9 @@ export default function Hero() {
 
         <div className="flex flex-col mt-2">
           <h1 className="flex flex-col text-2xl md:text-[40px] font-semibold text-white mb-2">
-            Hey!
+            <p>
+              Hey!
+            </p>
             <p className="">Tell us where you want to stay</p>
           </h1>
           <p className="text-white text-sm md:text-[24px] mb-4 font-medium">
