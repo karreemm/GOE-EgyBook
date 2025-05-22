@@ -79,7 +79,7 @@ export default function NavbarMobile() {
 
             <div className="flex flex-col gap-3 mt-10 text-[32px]">
               <Link
-                href="/language"
+                href="/"
                 className="flex items-center gap-1 hover:opacity-80"
               >
                 <Image
@@ -141,7 +141,7 @@ export default function NavbarMobile() {
 
             <div className="flex flex-col gap-3 mt-10 text-[32px]">
               <Link
-                href="/wishlist"
+                href="/"
                 className="flex items-center gap-1 hover:opacity-80"
               >
                 <Image
@@ -155,7 +155,7 @@ export default function NavbarMobile() {
               </Link>
 
               <Link
-                href="/cart"
+                href="/"
                 className="flex items-center gap-1 hover:opacity-80"
               >
                 <Image
@@ -169,7 +169,7 @@ export default function NavbarMobile() {
               </Link>
 
               <Link
-                href="/language"
+                href="/"
                 className="flex items-center gap-1 hover:opacity-80"
               >
                 <Image
@@ -184,21 +184,21 @@ export default function NavbarMobile() {
 
               <div className="flex flex-col gap-1 text-[28px] mt-2">
                 <Link
-                  href="/profile"
+                  href="/"
                   className="text-theme-gold hover:opacity-80"
                 >
                   My profile
                 </Link>
 
-                <Link href="/deals" className="hover:opacity-80">
+                <Link href="/" className="hover:opacity-80">
                   Saved deals
                 </Link>
 
-                <Link href="/invite" className="hover:opacity-80">
+                <Link href="/" className="hover:opacity-80">
                   Invite friends
                 </Link>
 
-                <Link href="/settings" className="hover:opacity-80">
+                <Link href="/" className="hover:opacity-80">
                   Settings
                 </Link>
 

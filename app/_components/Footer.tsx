@@ -41,7 +41,7 @@ export default function Footer() {
             <p className="text-center md:text-left text-xl md:text-[36px] text-white my-4">
               Lorem, Ipsum Lorem, Ipsum Lorem, Ipsum or less.
             </p>
-            <Link href="/discover">
+            <Link href="/">
               <button className="bg-theme-gold text-lg md:text-[20px] font-medium py-2 px-6 rounded-full hover:opacity-75 cursor-pointer">
                 Discover More
               </button>
@@ -56,28 +56,28 @@ export default function Footer() {
               Home
             </Link>
             <Link
-              href="/egybook"
+              href="/"
               className="hover:underline underline-offset-8"
             >
               Egy
               <span className="text-white font-normal">Book</span>
             </Link>
             <Link
-              href="/egyexplore"
+              href="/"
               className="hover:underline underline-offset-8"
             >
               Egy
               <span className="text-white font-normal">Explore</span>
             </Link>
             <Link
-              href="/egytales"
+              href="/"
               className="hover:underline underline-offset-8"
             >
               Egy
               <span className="text-white font-normal">Tales</span>
             </Link>
             <Link
-              href="/egytreasure"
+              href="/"
               className="hover:underline underline-offset-8"
             >
               Egy

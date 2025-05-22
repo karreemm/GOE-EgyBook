@@ -41,14 +41,14 @@ export default function Navbar() {
           <Search />
 
           <Link
-            href=""
+            href="/"
             className="font-medium text-lg text-theme-gold hover:underline underline-offset-8"
           >
             GOE
           </Link>
 
           <Link
-            href=""
+            href="/"
             className="font-semibold text-lg text-theme-gold hover:underline underline-offset-8"
           >
             Egy
@@ -56,7 +56,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href=""
+            href="/"
             className="font-semibold text-lg text-theme-gold hover:underline underline-offset-8"
           >
             Egy
@@ -64,7 +64,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href=""
+            href="/"
             className="font-semibold text-lg text-theme-gold hover:underline underline-offset-8"
           >
             Egy
@@ -72,7 +72,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href=""
+            href="/"
             className="font-semibold text-lg text-theme-gold hover:underline underline-offset-8"
           >
             Egy
